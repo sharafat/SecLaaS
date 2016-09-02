@@ -1,0 +1,19 @@
+<configuration xmlns="http://logging.apache.org/log4php/">
+    <appender name="echo" class="LoggerAppenderEcho">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date{Y-m-d H:i:s.u} %-5level %msg%n"/>
+        </layout>
+        <param name="htmlLineBreaks" value="true"/>
+    </appender>
+    <appender name="file" class="LoggerAppenderFile">
+        <layout class="LoggerLayoutPattern">
+            <param name="conversionPattern" value="%date{Y-m-d H:i:s.u} %-5level %msg%n"/>
+        </layout>
+        <param name="file" value="/Users/sharafat/Dropbox/Sharafat/htdocs/SecLaaS/logs/SecLaaS.log" />
+    </appender>
+    <root>
+        <level value="DEBUG" />
+        <appender_ref ref="echo" />
+        <appender_ref ref="file" />
+    </root>
+</configuration>
